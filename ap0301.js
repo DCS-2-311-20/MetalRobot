@@ -1,9 +1,12 @@
 //
-// 応用プログラミング 課題4.1
-// G084002020 拓殖太郎
-// $Id$
+// 応用プログラミング 第3回 課題1 (ap0301)
+// G184002021 拓殖太郎
 //
 "use strict"; // 厳格モード
+
+import * as THREE from 'three';
+import GUI from 'gui';
+import { makeMetalRobot } from './robot.js'
 
 // ３Ｄページ作成関数の定義
 function init() {
@@ -62,7 +65,7 @@ function init() {
   }
 
   // カメラのコントローラ
-  const gui = new dat.GUI();
+  const gui = new GUI();
   gui.add(cameraParam, "fov", 10, 100).onChange(render);
   gui.add(cameraParam, "x", -40, 40).onChange(render);
   gui.add(cameraParam, "y", -40, 40).onChange(render);
@@ -72,4 +75,5 @@ function init() {
   render();
 }
 
-document.onload = init();
+// 3Dページ作成関数の呼び出し
+init();

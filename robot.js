@@ -5,10 +5,12 @@
 //
 "use strict"; // 厳格モード
 
+import * as THREE from "three"
+
 const seg = 12; // 円や円柱の分割数
 const gap = 0.01; // 胸のマークなどを浮かせる高さ
 
-function makeMetalRobot() {
+export function makeMetalRobot() {
   // メタルロボットの設定
   const metalRobot = new THREE.Group
   const metalMaterial = new THREE.MeshPhongMaterial(
@@ -43,7 +45,7 @@ function makeMetalRobot() {
   return metalRobot;
 }
 
-function makeCBRobot() {
+export function makeCBRobot() {
   // 段ボールロボットの設定
   const cardboardRobot = new THREE.Group
   const cardboardMaterial = new THREE.MeshLambertMaterial({ color: 0xccaa77 });
