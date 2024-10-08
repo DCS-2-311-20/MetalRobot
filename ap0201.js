@@ -35,7 +35,7 @@ function init() {
 
   // 金属製ロボットの追加
   const metalRobot = makeMetalRobot();
-  scene.add(metalRobot);
+  scene.add(metalrobot);
 
   // 光源の設定
   const spotLight = new THREE.SpotLight(0xffffff, 2500);
